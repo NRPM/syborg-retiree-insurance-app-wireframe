@@ -35,8 +35,19 @@ const Invite = () => {
       </Box>
 
       {/* <Typography>Refund request</Typography> */}
-      <TableContainer>
-        <Table sx={{ minWidth: "50rem" }} aria-label="simple table">
+      <TableContainer
+        sx={{
+          borderRadius: "5px",
+          backgroundColor: "white",
+          border: "1px solid #ccc",
+          marginTop: "1rem",
+        }}
+      >
+        <Table
+          sx={{ minWidth: "50rem" }}
+          size="small"
+          aria-label="simple table"
+        >
           <TableHead>
             <TableRow>
               <TableCell
