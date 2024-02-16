@@ -21,7 +21,7 @@ const Sidebar = ({ currentHref }) => {
     <Box
       sx={{
         bgcolor: "#fff",
-        maxWidth: "20rem",
+        width: "15%",
         padding: "2rem",
         position: "fixed",
         left: "0",
@@ -66,6 +66,20 @@ const Sidebar = ({ currentHref }) => {
             </ListItemButton>
           </ListItem>
         </Link>
+        <Link
+          style={{ textDecoration: "none", color: "black" }}
+          to="/paymentdetails"
+        >
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <PaymentIcon />
+              </ListItemIcon>
+              <ListItemText primary="Payment Details" />
+            </ListItemButton>
+          </ListItem>
+        </Link>
+
         <Link
           style={{ textDecoration: "none", color: "black" }}
           to="/refundrequest"

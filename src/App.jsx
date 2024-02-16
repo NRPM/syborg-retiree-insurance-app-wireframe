@@ -21,6 +21,7 @@ import OtpAuth from "./components/OtpAuth";
 import Invite from "./components/Invite";
 import PaymentSuccessful from "./components/PaymentSuccessful";
 import SendPaymentLink from "./components/SendPaymentLink";
+import PaymentDetails from "./components/PaymentDetails";
 
 function App() {
   useEffect(() => {});
@@ -137,6 +138,7 @@ function App() {
           <Route path="/paymentsuccessful" element={<PaymentSuccessful />} />
           <Route path="/invite" element={<Invite />} />
           <Route path="/sendpaymentlink" element={<SendPaymentLink />} />
+          <Route path="/paymentdetails" element={<PaymentDetails />} />
         </Routes>
       </Container>
     </>

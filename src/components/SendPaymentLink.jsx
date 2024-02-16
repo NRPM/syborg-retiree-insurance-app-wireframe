@@ -2,19 +2,30 @@ import {
   Box,
   Button,
   Chip,
+  IconButton,
   Table,
   TableBody,
   TableCell,
   TableContainer,
   TableHead,
   TableRow,
+  TextField,
   Typography,
+  useScrollTrigger,
 } from "@mui/material";
-import React from "react";
+import SearchIcon from "@mui/icons-material/Search";
+import TuneOutlinedIcon from "@mui/icons-material/TuneOutlined";
+import React, { useState } from "react";
+import FilterDrawer from "./FilterDrawer";
 
 const SendPaymentLink = () => {
+  const [openFilterDrawer, setOpenFilterDrawer] = useState(false);
   return (
     <>
+      <FilterDrawer
+        openFilterDrawer={openFilterDrawer}
+        setOpenFilterDrawer={setOpenFilterDrawer}
+      />
       <Box
         sx={{
           display: "flex",
@@ -37,6 +48,33 @@ const SendPaymentLink = () => {
           </Typography>
         </Box>
         <hr style={{ margin: "0px 0px 30px 0px" }}></hr>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          <TextField
+            sx={{ width: "20%" }}
+            size="small"
+            fullWidth
+            placeholder="search"
+          />
+          <IconButton variant="contained">
+            <SearchIcon
+              sx={{
+                color: "white",
+                bgcolor: "#1976d2",
+                borderRadius: "50%",
+                padding: "0.5rem",
+              }}
+            />
+          </IconButton>
+          <IconButton
+            sx={{ marginLeft: "auto" }}
+            onClick={() => {
+              setOpenFilterDrawer(true);
+            }}
+          >
+            <TuneOutlinedIcon fontSize="large" />
+          </IconButton>
+        </Box>
+
         <TableContainer
           sx={{
             borderRadius: "5px",
