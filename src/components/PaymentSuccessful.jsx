@@ -10,13 +10,11 @@ const PaymentSuccessful = () => {
         height: "80vh",
         justifyContent: "center",
         alignItems: "center",
-        marginLeft: "250px",
       }}
     >
       <Box
         sx={{
           padding: "5rem",
-          //   border: "1px solid lightGrey",
           borderRadius: "10px",
         }}
       >

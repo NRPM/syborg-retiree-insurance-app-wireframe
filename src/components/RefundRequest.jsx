@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import {
   Box,
+  Divider,
   Table,
   TableBody,
   TableCell,
@@ -22,8 +23,7 @@ const RefundRequest = ({ currentHref, setCurrentHref }) => {
         flexDirection: "column",
         padding: "2rem",
         marginLeft: "auto",
-        width: "100%",
-        // marginRight: "auto",
+     
       }}
     >
       <Box
@@ -37,7 +37,7 @@ const RefundRequest = ({ currentHref, setCurrentHref }) => {
           Refund Request
         </Typography>
       </Box>
-      <hr style={{ margin: "20px 0px 20px 0px" }}></hr>
+      <Divider sx={{ marginBottom: "2rem" }} />
 
       {/* <Typography>Refund request</Typography> */}
       <TableContainer

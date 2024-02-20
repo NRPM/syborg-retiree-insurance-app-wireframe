@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Divider,
   IconButton,
   Table,
   TableBody,
@@ -29,14 +30,11 @@ const PaymentDetails = () => {
           flexDirection: "column",
           padding: "2rem",
           marginLeft: "auto",
-          width: "100%",
-          //   marginRight: "auto",
         }}
       >
         <Box
           sx={{
             maxHeight: "3rem",
-            // marginTop: "2rem",
             marginBottom: "1rem",
           }}
         >
@@ -44,7 +42,7 @@ const PaymentDetails = () => {
             Payment Details
           </Typography>
         </Box>
-        <hr style={{ margin: "0px 0px 30px 0px" }}></hr>
+        <Divider sx={{ marginBottom: "2rem" }} />
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <TextField
             sx={{ width: "20%" }}

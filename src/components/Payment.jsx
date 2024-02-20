@@ -60,7 +60,7 @@ const Payment = ({ profileData, currentHref, setCurrentHref }) => {
           Payment
         </Typography>
       </Box>
-      <hr style={{ margin: "0px 0px 30px 0px" }}></hr>
+      <Divider sx={{ marginBottom: "2rem" }} />
       <Box
         sx={{
           maxHeight: "3rem",

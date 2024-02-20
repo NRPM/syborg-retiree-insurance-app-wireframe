@@ -80,20 +80,8 @@ const Profile = ({
           <VisibilityOutlinedIcon fontSize="large" color="primary" />
         </IconButton>
       </Box>
-      {/* <Divider sx={{ marginBottom: "2rem" }} /> */}
-      <hr style={{ margin: "0px 0px 30px 0px" }}></hr>
-      {/* <Box sx={{ maxHeight: "3rem", marginBottom: "1rem" }}>
-        <FormHelperText>ASSOCIATION NAME</FormHelperText>
-        <TextField
-          // sx={{ width: "30rem" }}
-          size="small"
-          fullWidth
-          value={profileData.associationName}
-          // label="Association name"
-          name="associationName"
-          onChange={handleChange}
-        />
-      </Box> */}
+      <Divider sx={{ marginBottom: "2rem" }} />
+      
       <Box sx={{ maxHeight: "3rem", marginBottom: "1rem" }}>
         <FormControl fullWidth>
           {/* <InputLabel id="demo-simple-select-label">Payment Method</InputLabel> */}

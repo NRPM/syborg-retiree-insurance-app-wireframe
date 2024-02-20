@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Chip,
+  Divider,
   IconButton,
   Table,
   TableBody,
@@ -32,7 +33,6 @@ const SendPaymentLink = () => {
           flexDirection: "column",
           padding: "2rem",
           marginLeft: "auto",
-          width: "100%",
           //   marginRight: "auto",
         }}
       >
@@ -47,8 +47,7 @@ const SendPaymentLink = () => {
             Send Payment Link
           </Typography>
         </Box>
-        <hr style={{ margin: "0px 0px 30px 0px" }}></hr>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Divider sx={{ marginBottom: "2rem" }} />        <Box sx={{ display: "flex", alignItems: "center" }}>
           <TextField
             sx={{ width: "20%" }}
             size="small"

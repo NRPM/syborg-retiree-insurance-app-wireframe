@@ -1,27 +1,23 @@
-import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import { Navigate, Route, Routes } from "react-router-dom";
-import RefundRequest from "./components/RefundRequest";
 import {
   AppBar,
   Box,
-  Button,
   Container,
   IconButton,
-  Toolbar,
-  Typography,
+  Toolbar
 } from "@mui/material";
-import Profile from "./components/Profile";
-import PolicySelection from "./components/PolicySelection";
-import Sidebar from "./components/Sidebar";
-import Payment from "./components/Payment";
-import OtpAuth from "./components/OtpAuth";
+import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
 import Invite from "./components/Invite";
-import PaymentSuccessful from "./components/PaymentSuccessful";
-import SendPaymentLink from "./components/SendPaymentLink";
+import OtpAuth from "./components/OtpAuth";
+import Payment from "./components/Payment";
 import PaymentDetails from "./components/PaymentDetails";
+import PaymentSuccessful from "./components/PaymentSuccessful";
+import PolicySelection from "./components/PolicySelection";
+import Profile from "./components/Profile";
+import RefundRequest from "./components/RefundRequest";
+import SendPaymentLink from "./components/SendPaymentLink";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   useEffect(() => {});
@@ -62,8 +58,8 @@ function App() {
 
   const [currentHref, setCurrentHref] = useState(location.href);
   return (
-    <>
-      <AppBar position="fixed" sx={{ bgcolor: "#fff", color: "black" }}>
+    <Box sx={{ backgroundColor:"#F4F4F4",display:"flex", justifyContent:"space-between", flexDirection:"column"}}>
+      <AppBar  sx={{ bgcolor: "#fff", color: "black" }}>
         <Toolbar>
           <IconButton
             size="medium"
@@ -74,20 +70,18 @@ function App() {
           >
             Insurance app
           </IconButton>
-          {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
-          </Typography> */}
-          {/* <Button color="inherit">Login</Button> */}
         </Toolbar>
       </AppBar>
-      <Container
+      <Box
         sx={{
           display: "flex",
-          // position: "absolute",
           paddingTop: "4rem",
+          margin:"0px",
+          minHeight:"100vh"
         }}
       >
         {!currentHref.endsWith("/otp") && <Sidebar currentHref={currentHref} />}
+        <Box className="content-container" sx={{width:"70%",backgroundColor:"#fff",margin:"30px 30px 30px 300px", borderRadius:"20px"}}>
         <Routes>
           <Route
             path="/otp"
@@ -140,8 +134,9 @@ function App() {
           <Route path="/sendpaymentlink" element={<SendPaymentLink />} />
           <Route path="/paymentdetails" element={<PaymentDetails />} />
         </Routes>
-      </Container>
-    </>
+        </Box>
+      </Box>
+    </Box>
   );
 }
 

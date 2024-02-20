@@ -14,7 +14,6 @@ const OtpAuth = ({ setCurrentHref }) => {
         height: "80vh",
         justifyContent: "center",
         alignItems: "center",
-        marginLeft: "0",
       }}
     >
       <Box

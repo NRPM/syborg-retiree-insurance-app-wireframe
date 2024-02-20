@@ -1,34 +1,32 @@
+import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
+import IosShareIcon from "@mui/icons-material/IosShare";
+import PaymentIcon from "@mui/icons-material/Payment";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import PolicyIcon from "@mui/icons-material/Policy";
 import {
   Box,
-  Button,
-  Container,
   List,
   ListItem,
   ListItemButton,
   ListItemIcon,
-  ListItemText,
+  ListItemText
 } from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import PermIdentityIcon from "@mui/icons-material/PermIdentity";
-import PolicyIcon from "@mui/icons-material/Policy";
-import PaymentIcon from "@mui/icons-material/Payment";
-import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
-import IosShareIcon from "@mui/icons-material/IosShare";
 const Sidebar = ({ currentHref }) => {
   return (
     <Box
       sx={{
         bgcolor: "#fff",
-        width: "15%",
-        padding: "2rem",
+        width: "220px",
         position: "fixed",
         left: "0",
         display: "flex",
         flexDirection: "column",
-        minHeight: "100%",
-        borderRight: "1px solid lightgrey",
+        minHeight: "75%",
+        margin:"30px",
+        borderRadius:"20px"
+        // borderRight: "1px solid lightgrey",
       }}
     >
       <List>
